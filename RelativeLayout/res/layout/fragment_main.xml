@@ -34,8 +34,8 @@
     <Button
         android:layout_width="96dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/month"
-        android:layout_toRightOf="@+id/month"
+        android:layout_below="@+id/date"
+        android:layout_alignLeft="@+id/date"
         android:text="Done" />
 
 </RelativeLayout>
