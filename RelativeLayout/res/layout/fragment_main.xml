@@ -15,28 +15,27 @@
         android:hint="Remind Me" />
     
     <Spinner 
-        android:id="@+id/dates"
+        android:id="@+id/month"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/name"
         android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/times"
+        android:layout_toLeftOf="@+id/date"
         />
     
     <Spinner
-        android:id="@+id/times"
+        android:id="@+id/date"
         android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/name"
         android:layout_alignParentRight="true"
         />
-    
-    <Button 
+
+    <Button
         android:layout_width="96dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/times"
-        android:layout_alignParentRight="@id/times"
-        android:text="Done"
-        />
+        android:layout_below="@+id/month"
+        android:layout_toRightOf="@+id/month"
+        android:text="Done" />
 
 </RelativeLayout>
