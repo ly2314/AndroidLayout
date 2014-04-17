@@ -9,38 +9,34 @@
     tools:context="com.ly2314.relativelayout.MainActivity$PlaceholderFragment" >
 
     <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:hint="Remind Me" />
+    
+    <Spinner 
+        android:id="@+id/dates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="32dp"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
+        android:layout_toLeftOf="@+id/times"
+        />
+    
     <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
+        android:id="@+id/times"
+        android:layout_width="96dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/spinner1" />
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_alignParentRight="true"
+        />
+    
+    <Button 
+        android:layout_width="96dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinner2"
-        android:layout_below="@+id/editText1" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinner2"
-        android:layout_below="@+id/spinner2"
-        android:text="Button" />
+        android:layout_below="@id/times"
+        android:layout_alignParentRight="@id/times"
+        android:text="Done"
+        />
 
 </RelativeLayout>
