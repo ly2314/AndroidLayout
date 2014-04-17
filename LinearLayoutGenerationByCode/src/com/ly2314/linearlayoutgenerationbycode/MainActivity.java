@@ -102,7 +102,7 @@ public class MainActivity extends ActionBarActivity {
         	LinearLayout.LayoutParams _buttons_layout = (LinearLayout.LayoutParams)_buttons.getLayoutParams();
         	_buttons_layout.width = LayoutParams.WRAP_CONTENT;
         	_buttons_layout.gravity = Gravity.RIGHT;
-        	
+        	        	
         	return rootView;
         }
     }
