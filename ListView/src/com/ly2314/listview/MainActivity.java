@@ -14,9 +14,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
@@ -59,6 +62,8 @@ public class MainActivity extends ActionBarActivity {
 
 		private ListView _listView;
 		
+		private final static String[] NAMES = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+		
 		public PlaceholderFragment() {
 		}
 
@@ -68,6 +73,17 @@ public class MainActivity extends ActionBarActivity {
 			View rootView = inflater.inflate(R.layout.fragment_main, container,
 					false);
 			_listView = (ListView) rootView.findViewById(R.id.listView1);
+			_listView.setOnItemClickListener(new OnItemClickListener()
+			{
+				@Override
+				public void onItemClick(AdapterView<?> listView, View view,
+				int position, long id)
+				{
+					String name = NAMES[position];
+					Toast.makeText(getActivity(), name, Toast.LENGTH_SHORT)
+					.show();
+				}
+				});
 
 			String[] text = new String[] { "1", "2", "3", "4", "5", "6", "7",
 					"8", "9" };
